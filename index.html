@@ -13,27 +13,16 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-3892196-38']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
   </head>
   <body>
     <div class="wrapper">
       <header>
         <h1>Pico</h1>
 <p>Pico is a stupidly simple, blazing fast, flat file CMS.</p>
-        <p class="view"><a href="https://github.com/gilbitron/Pico">View the Project on GitHub <small>gilbitron/Pico</small></a></p>
+        <p class="view"><a href="https://github.com/johnko/Pico">View the Project on GitHub <small>johnko/Pico</small></a></p>
         <ul>
-          <li><a href="https://github.com/gilbitron/Pico/zipball/master">Download <strong>v0.1</strong></a></li>
-          <li><a href="https://github.com/gilbitron/Pico">View On <strong>GitHub</strong></a></li>
+          <li><a href="https://github.com/johnko/Pico/zipball/master">Download <strong>v0.1-johnko</strong></a></li>
+          <li><a href="https://github.com/johnko/Pico">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
       <section>
@@ -43,8 +32,8 @@
 folder and that becomes a page.</p>
 
 <p>If you created folder within the content folder (e.g. <code>content/sub</code>) and put an <code>index.txt</code> inside it, you can access that folder at the URL 
-<code><a href="http://yousite.com/sub">http://yousite.com/sub</a></code>. If you want another page within the sub folder, simply create a text file with the corresponding name (e.g. <code>content/sub/page.txt</code>)
-and will be able to access it from the URL <code><a href="http://yousite.com/sub/page">http://yousite.com/sub/page</a></code>.</p> 
+<code><a href="#">http://example.com/sub</a></code>. If you want another page within the sub folder, simply create a text file with the corresponding name (e.g. <code>content/sub/page.txt</code>)
+and will be able to access it from the URL <code><a href="#">http://example.com/sub/page</a></code>.</p> 
 
 <p>Below we've shown some examples of content locations and their corresponing URL's:</p>
 
@@ -85,6 +74,7 @@ and will be able to access it from the URL <code><a href="http://yousite.com/sub
 Title: Welcome
 Description: This description will go in the meta description tag
 Robots: noindex,nofollow
+Theme: default
 */
 </code></pre>
 
@@ -97,7 +87,7 @@ Robots: noindex,nofollow
 </ul><h2>Themes</h2>
 
 <p>You can create themes for your Pico installation and in the "themes" folder. Check out the default theme for an example of a theme. Pico uses
-<a href="http://twig.sensiolabs.org/documentation">Twig</a> for it's templating engine. You can select your theme by setting the <code>$config['theme']</code> variable
+<a href="http://twig.sensiolabs.org/documentation">Twig</a> for it's templating engine. You can select your theme by changing the meta `Theme:`-tag or by setting the <code>$config['theme']</code> variable
 in config.php to your theme folder.</p>
 
 <p>All themes must include an <code>index.html</code> file to define the HTML structure of the theme. Below are the Twig variables that are available to use in your theme:</p>
@@ -116,7 +106,7 @@ in config.php to your theme folder.</p>
 <li>
 <code>{{ site_title }}</code> - Shortcut to the site title (defined in config.php)</li>
 <li>
-<code>{{ meta }}</code> - Contains the meta values from the current page (e.g. <code>{{ meta.title }}</code>, <code>{{ meta.description }}</code>, <code>{{ meta.robots }}</code>)</li>
+<code>{{ meta }}</code> - Contains the meta values from the current page (e.g. <code>{{ meta.title }}</code>, <code>{{ meta.description }}</code>, <code>{{ meta.robots }}</code>, <code>{{ meta.theme }}</code>)</li>
 <li>
 <code>{{ content }}</code> - The content of the current page (after it has been processed through Markdown)</li>
 </ul><h2>Config</h2>
@@ -125,13 +115,14 @@ in config.php to your theme folder.</p>
 list all of the settings and their defaults. To override a setting simply uncomment it in config.php and set your custom value.</p>
 
 <h2>Contribute</h2>
-<p>Help make Pico better by checking out <a href="https://github.com/gilbitron/Pico">the Git repoistory</a> and submitting pull requests. If you find a bug
+<p>Help make Pico better by checking out <a href="https://github.com/gilbitron/Pico">the original Git repoistory</a> and submitting pull requests. If you find a bug
 please report it on <a href="https://github.com/gilbitron/Pico/issues">the issues page</a>.</p>
       </section>
     </div>
     <footer>
       <p>Pico was made by <a href="http://gilbert.pellegrom.me">Gilbert Pellegrom</a> from <a href="http://dev7studios.com">Dev7studios</a></p>
       <p>Released under the MIT license</p>
+      <p>This fork of Pico brought to you by yckart, billortell, mathroc and myself. You can view <a href="https://github.com/johnko/Pico/commits/master">the complete list of code authors</a>.</p>
     </footer>
     <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
   </body>
